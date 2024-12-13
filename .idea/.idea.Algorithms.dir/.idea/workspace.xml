@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ae2c0e1-4224-4514-90ab-ee18b283fdfb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Algorithms.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Algorithms.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4.6.knapsack.fractional.py" beforeDir="false" afterPath="$PROJECT_DIR$/4.6.knapsack.fractional.py" afterDir="false" />
-    </list>
+    <list default="true" id="9ae2c0e1-4224-4514-90ab-ee18b283fdfb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +50,7 @@
       <updated>1730952218741</updated>
       <workItem from="1730952222293" duration="1898000" />
       <workItem from="1732163271796" duration="1827000" />
-      <workItem from="1734080893650" duration="6286000" />
+      <workItem from="1734080893650" duration="6700000" />
     </task>
     <servers />
   </component>
