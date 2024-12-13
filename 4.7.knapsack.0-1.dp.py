@@ -10,7 +10,6 @@ def knapsack(n, W, DP):
                              knapsack(n - 1, W - w[n], DP) + p[n])
 
     return DP[(n, W)]
-    
 
 # Example 1
 print("######Example 1######")

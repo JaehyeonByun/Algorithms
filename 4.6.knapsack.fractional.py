@@ -24,7 +24,7 @@ def knapsack(n, W, w, p):
             remaining_weight = W - total_weight
             maxprofit += item.profit_per_weight * remaining_weight
             break  
-    #
+    # 
     return maxprofit
 
 # Example 1
