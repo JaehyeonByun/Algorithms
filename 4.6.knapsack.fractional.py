@@ -13,7 +13,8 @@ def knapsack(n, W, w, p):
         item = Item(i + 1, w[i], p[i])
         heappush(heap, (-item.profit_per_weight, item))
     maxprofit = total_weight = 0
-
+    
+    # code
     while heap and total_weight < W:
         _, item = heappop(heap) 
         if total_weight + item.weight <= W: 
@@ -23,6 +24,7 @@ def knapsack(n, W, w, p):
             remaining_weight = W - total_weight
             maxprofit += item.profit_per_weight * remaining_weight
             break  
+    #
     return maxprofit
 
 # Example 1
