@@ -1,40 +1,40 @@
 from heapq import heappush, heappop
 
 class Node:
-
     def __init__(self, symbol, freq):
         self.symbol = symbol
         self.freq = freq
-        self.left = None
-        self.right = None
-        
+        self.left = '+'
+        self.right = '+'
+
     def preorder(self, path):
         path.append((self.symbol, self.freq))
-        if self.left != None:
+        if self.left != '+':
             self.left.preorder(path)
-        if self.right != None:
+        if self.right != '+':
             self.right.preorder(path)
 
     def inorder(self, path):
-        if self.left != None:
+        if self.left != '+':
             self.left.inorder(path)
         path.append((self.symbol, self.freq))
-        if self.right != None:
+        if self.right != '+':
             self.right.inorder(path)
 
 def huffman(n, s, f):
     heap = []
     for i in range(n):
         heappush(heap, (f[i], Node(s[i], f[i])))
-        
-    while len(heap) > 1:
-        freq1, left_node = heappop(heap)
-        freq2, right_node = heappop(heap)
-        merged_node = Node("+", freq1 + freq2)
-        merged_node.left = left_node
-        merged_node.right = right_node
-        heappush(heap, (merged_node.freq, merged_node))
 
+    # Huffman Algorithm
+    while len(heap) > 1:
+        f1, n1 = heappop(heap)
+        f2, n2 = heappop(heap)
+        new_node = Node('+', f1 + f2)
+        new_node.left = n1
+        new_node.right = n2
+        heappush(heap, (new_node.freq, new_node))
+    
     return heappop(heap)[1]
 
 # Example 1
@@ -50,11 +50,12 @@ path = []
 root.inorder(path)
 print("inorder= ",path)
 
-# Example 2 - Your Custom Case
-print("######Example 2 #######") 
-n = 6
-s = ['f', 'a', 'c', 'd', 'b', 'e']
-f = [3, 7, 11, 16, 20, 25]
+
+# Example 2 - Custom Case
+print("######Example 2 #######")
+n = 4
+s = ['x', 'y', 'z', 'w']
+f = [10, 3, 5, 9]
 root = huffman(n, s, f)
 path = []
 root.preorder(path)
